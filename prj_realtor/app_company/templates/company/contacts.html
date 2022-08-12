@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+
+<div class="container ">
+       <h3 class="d-flex m-1 p-1  fw-bold text-secondary d-flex justify-content-end">Контакты</h3>
+    <div class="row   d-flex justify-content-center" style="height:25rem">
+        <div class="col-lg-6 col-md-8 ">
+            <div class="card text-center" style="width: 29rem;">
+                <div class="card-header">
+                    Контакты
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Россия, Республика Коми, г.Воркута, ул. Ленина, 1</li>
+                    <li class="list-group-item">polar_development@mail.com</li>
+                    <li class="list-group-item">+ 7 (82151) 3-45-67</li>
+                    <li class="list-group-item"><div class="group-inline my-1">
+                            <a href="#" class="text-decoration-none fw-bold text-dark mx-4"><i
+                                    class="fa fa-lg fa-whatsapp" aria-hidden="true"></i> </a>
+                            <a href="#" class="text-decoration-none fw-bold text-dark mx-4"><i
+                                    class="fa fa-lg fa-twitter" aria-hidden="true"></i> </a>
+                            <a href="#" class="text-decoration-none fw-bold text-dark mx-4"><i class="fa fa-lg fa-vk"
+                                                                                              aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none fw-bold text-dark mx-4"><i
+                                    class="fa fa-lg fa-facebook-official" aria-hidden="true"></i></a>
+                            <a href="#" class="text-decoration-none fw-bold text-dark mx-4"><i
+                                    class="fa fa-lg fa-telegram" aria-hidden="true"></i></i> </a>
+
+                        </div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

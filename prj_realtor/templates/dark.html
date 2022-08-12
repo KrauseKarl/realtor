@@ -1,0 +1,16 @@
+{% load static %}
+{% load i18n %}
+{% load static %}
+
+
+<div>
+    <form method="get">{% csrf_token %}
+        {{form.dark}}
+        <button class="btn
+                            {% if request.session.dark.mode == 'light' %}btn-light text-dark
+                            {% else %}  btn-dark text-light {% endif %}
+                             rounded p-1 px-2 fw-bold " name="dark" value="True" type="submit">
+            {% if request.session.dark.mode == 'light' %}  DAY {% else %} NIGTH{% endif %}
+        </button>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<div class="container w-100">
+    <h3 class="d-flex p-1  fw-bold text-secondary justify-content-end">Новости
+        <a href="{% url 'app_rss:rss' %}"
+           class="text-decoration-none btn  rounded-3 p-1  ms-2 my-1">
+            <i class="fa fa-rss-square" aria-hidden="true"></i>
+            RSS </a>
+        <a href="{% url 'app_rss:atom' %}"
+           class="text-decoration-none btn  rounded-3 p-1  my-1 ">
+            <i class="fa fa-rss-square" aria-hidden="true"></i>
+            Atom </a>
+    </h3>
+    <div class="row my-1 ">
+        <div class="col-lg-12 col-md-3 col-sm-12">
+            <a class="btn btn-outline-success px-2 py-1 m-1 "
+               href="{% url 'app_news:news_list' %}">
+                <i class="fa fa-slack" aria-hidden="true"></i>
+                Все новости
+
+                {% for tag in tags|slice:"8" %}
+                <a class="btn btn-outline-success px-2 py-1 m-1 " href="{% url 'app_news:news_tag' tag.slug %}">
+                    <i class="fa fa-slack" aria-hidden="true"></i> {{tag.tag_name|truncatechars:10}}</a>
+                {% endfor %}</a>
+        </div>
+        <div class="col-lg-12 col-md-9 col-sm-12">
+            <div class="row">
+            {% for n in page_obj %}
+            <div class="col-lg-2 col-sm-12 p-3 " style="height: 8rem">
+                <img src="{{n.image.url}}" alt="{{ n.title }}"
+                     class=" rounded-3 d-flex justify-content-center" style="width:7rem; height:6rem">
+            </div>
+            <div class="col-lg-9 col-sm-12 p-3 text-secondary " style="height: 8rem">
+                <a href="{% url 'app_news:news_detail' n.pk %}" class="text-decoration-none text-secondary">
+                    <h6><b>{{n.title|truncatechars:25}}</b></h6>
+                    {{n.text|truncatechars:90}}<br>
+                </a>
+
+                <small>
+                    {{n.created|date:"d M y"}}<br>
+                    {% for tag in n.hashtag.all %}
+                    <a href="{% url 'app_news:news_tag' tag.slug %}">#{{tag.tag_name|title}}</a>
+                    {% endfor %}
+                </small>
+
+            </div>
+            {% endfor %}
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock content%}

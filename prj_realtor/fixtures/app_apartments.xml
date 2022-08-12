@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="app_apartments.infrastructure" pk="1">
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="school" type="SmallIntegerField">2</field>
+        <field name="kindergarten" type="SmallIntegerField">3</field>
+        <field name="bank" type="SmallIntegerField">4</field>
+        <field name="post" type="SmallIntegerField">1</field>
+        <field name="shop" type="SmallIntegerField">5</field>
+        <field name="spy" type="SmallIntegerField">3</field>
+        <field name="fitness_club" type="SmallIntegerField">2</field>
+        <field name="park" type="SmallIntegerField">0</field>
+        <field name="cinema" type="SmallIntegerField">1</field>
+    </object>
+    <object model="app_apartments.infrastructure" pk="2">
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="school" type="SmallIntegerField">2</field>
+        <field name="kindergarten" type="SmallIntegerField">1</field>
+        <field name="bank" type="SmallIntegerField">2</field>
+        <field name="post" type="SmallIntegerField">1</field>
+        <field name="shop" type="SmallIntegerField">5</field>
+        <field name="spy" type="SmallIntegerField">2</field>
+        <field name="fitness_club" type="SmallIntegerField">1</field>
+        <field name="park" type="SmallIntegerField">2</field>
+        <field name="cinema" type="SmallIntegerField">1</field>
+    </object>
+    <object model="app_apartments.infrastructure" pk="3">
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="school" type="SmallIntegerField">1</field>
+        <field name="kindergarten" type="SmallIntegerField">1</field>
+        <field name="bank" type="SmallIntegerField">2</field>
+        <field name="post" type="SmallIntegerField">1</field>
+        <field name="shop" type="SmallIntegerField">4</field>
+        <field name="spy" type="SmallIntegerField">2</field>
+        <field name="fitness_club" type="SmallIntegerField">3</field>
+        <field name="park" type="SmallIntegerField">2</field>
+        <field name="cinema" type="SmallIntegerField">0</field>
+    </object>
+    <object model="app_apartments.residencearea" pk="4">
+        <field name="title" type="CharField">Central</field>
+        <field name="description" type="TextField"> Жилой комплекс "Центральный" - это квартал в историческом центре Воркуты. Он состоит из двух домов   с жилыми апартаментами и офисной галереи. Первые этажи занимает зона ритейла с ресторанами, офисами банков, аптеками, цветочными салонами, книжными магазинами и бутиками.</field>
+        <field name="slug" type="SlugField">central</field>
+        <field name="map" type="CharField">https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A778f49f2170d52883a7b55347079f89b356493134881c7096433576454aef674&amp;amp;width=100%25&amp;amp;height=500&amp;amp;lang=ru_RU&amp;amp;scroll=true</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="19"></object><object pk="20"></object><object pk="21"></object><object pk="22"></object><object pk="16"></object><object pk="17"></object><object pk="18"></object><object pk="23"></object><object pk="24"></object><object pk="25"></object><object pk="26"></object></field>
+    </object>
+    <object model="app_apartments.residencearea" pk="5">
+        <field name="title" type="CharField">Park</field>
+        <field name="description" type="TextField"> Позвольте себе каждое утро пробежку в своем парке!  Жилой комплекс "Парковый" - это современный жилой комплек состоящий из 4 домов рядом с центрльным парком Воркуты.  Первые этажи занимает зона ритейла с ресторанами, офисами банков, аптеками, цветочными салонами, книжными магазинами и бутиками.</field>
+        <field name="slug" type="SlugField">park</field>
+        <field name="map" type="CharField">https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5b7e805936ee40ba078a2f4823193cdff60f08016f7a906a2e8a0e974e03195e&amp;amp;width=100%25&amp;amp;height=500&amp;amp;lang=ru_RU&amp;amp;scroll=true</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="29"></object><object pk="30"></object><object pk="31"></object><object pk="27"></object><object pk="28"></object><object pk="32"></object><object pk="33"></object><object pk="34"></object><object pk="35"></object></field>
+    </object>
+    <object model="app_apartments.residencearea" pk="6">
+        <field name="title" type="CharField">River</field>
+        <field name="description" type="TextField">Для тех, кто любит жить в гармонии с природой. Жилой комплекс "Речник" расположен на берегу реки Воркута, в непосредственной близости с городским пляжем и вдали от городских шумных магистралей. Он состоит из трех домов . Первые этажи занимает зона ритейла с ресторанами, офисами банков, аптеками, цветочными салонами, книжными магазинами и бутиками.</field>
+        <field name="slug" type="SlugField">river</field>
+        <field name="map" type="CharField">https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A779b909ced90a60a27b05b5896c592a84e4237e246b79a17752de69a8b4f7885&amp;amp;width=100%25&amp;amp;height=500&amp;amp;lang=ru_RU&amp;amp;scroll=true</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="9"></object><object pk="10"></object><object pk="11"></object><object pk="12"></object><object pk="6"></object><object pk="7"></object><object pk="8"></object><object pk="13"></object><object pk="14"></object><object pk="15"></object></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="1">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">3</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:16:03.770000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:16:03.771000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">6500</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="2">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">89</field>
+        <field name="floor" type="PositiveIntegerField">4</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:17:04.039000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:17:04.039000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-rooms-plan_2.jpg</field>
+        <field name="price" type="DecimalField">8700</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="3">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">two</field>
+        <field name="square" type="PositiveIntegerField">109</field>
+        <field name="floor" type="PositiveIntegerField">5</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:17:39.422000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:17:39.422000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/2-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">12000</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="4">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">two</field>
+        <field name="square" type="PositiveIntegerField">81</field>
+        <field name="floor" type="PositiveIntegerField">2</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:18:18.830000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:18:18.830000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/2-rooms-plan_2.jpg</field>
+        <field name="price" type="DecimalField">10900</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="5">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">thr</field>
+        <field name="square" type="PositiveIntegerField">146</field>
+        <field name="floor" type="PositiveIntegerField">3</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:18:57.688000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:18:57.688000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/3-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">14500</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="6">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">thr</field>
+        <field name="square" type="PositiveIntegerField">119</field>
+        <field name="floor" type="PositiveIntegerField">4</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:19:36.021000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:19:36.021000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/3-rooms-plan_2.jpg</field>
+        <field name="price" type="DecimalField">14499</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="7">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">ext</field>
+        <field name="square" type="PositiveIntegerField">217</field>
+        <field name="floor" type="PositiveIntegerField">10</field>
+        <field name="type_acc" type="CharField">dpx</field>
+        <field name="description" type="TextField">Двухуровненавая квартира на последнем этаже с видом на Центральную площадь города</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:20:35.733000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:20:35.733000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/26/imgonline-com-ua-Replace-color-yWTUqr3uU8JhAxIR.jpg</field>
+        <field name="price" type="DecimalField">24000</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="8">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">ext</field>
+        <field name="square" type="PositiveIntegerField">121</field>
+        <field name="floor" type="PositiveIntegerField">10</field>
+        <field name="type_acc" type="CharField">dpx</field>
+        <field name="description" type="TextField">Двухуровненавая квартира на последнем этаже с видом на Центральную площадь города</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:21:18.350000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:21:18.350000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/Duplex-plan_2.jpg</field>
+        <field name="price" type="DecimalField">25900</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="9">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">zro</field>
+        <field name="square" type="PositiveIntegerField">33</field>
+        <field name="floor" type="PositiveIntegerField">6</field>
+        <field name="type_acc" type="CharField">std</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:21:59.138000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:21:59.138000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-studio_plan_1.jpg</field>
+        <field name="price" type="DecimalField">3400</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="10">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">zro</field>
+        <field name="square" type="PositiveIntegerField">26</field>
+        <field name="floor" type="PositiveIntegerField">7</field>
+        <field name="type_acc" type="CharField">std</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:22:34.480000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:22:34.480000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-studio_plan_2.jpg</field>
+        <field name="price" type="DecimalField">3800</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="11">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">64</field>
+        <field name="floor" type="PositiveIntegerField">24</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:16:03.770000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:16:03.771000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">6450</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="12">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">18</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:16:03.770000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:16:03.771000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/1-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">6000</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="13">
+        <field name="apartment_complex" type="CharField">R</field>
+        <field name="quantity" type="CharField">two</field>
+        <field name="square" type="PositiveIntegerField">109</field>
+        <field name="floor" type="PositiveIntegerField">14</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-13T15:17:39.422000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-13T15:17:39.422000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/13/2-rooms-plan_1.jpg</field>
+        <field name="price" type="DecimalField">11600</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">6</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="14">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">64</field>
+        <field name="floor" type="PositiveIntegerField">2</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:38:58.247000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:38:58.247000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_1_C.jpg</field>
+        <field name="price" type="DecimalField">8900</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="15">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">12</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:39:23.305000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:39:23.305000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_1_C_Zzch2x0.jpg</field>
+        <field name="price" type="DecimalField">9100</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="16">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">3</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:39:44.039000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:39:44.039000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_1_P.jpg</field>
+        <field name="price" type="DecimalField">8760</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="17">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">9</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:40:02.253000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:40:02.253000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_1_P_ssZaRSU.jpg</field>
+        <field name="price" type="DecimalField">6790</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="18">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">65</field>
+        <field name="floor" type="PositiveIntegerField">13</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:40:20.172000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:40:20.172000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_1_P_10vqPJS.jpg</field>
+        <field name="price" type="DecimalField">6770</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">True</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="19">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">89</field>
+        <field name="floor" type="PositiveIntegerField">4</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:41:16.702000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:41:16.702000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_2_C.jpg</field>
+        <field name="price" type="DecimalField">9900</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="20">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">89</field>
+        <field name="floor" type="PositiveIntegerField">19</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:41:35.448000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:41:35.448000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_2_C_cZaVqab.jpg</field>
+        <field name="price" type="DecimalField">12300</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="21">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">89</field>
+        <field name="floor" type="PositiveIntegerField">23</field>
+        <field name="type_acc" type="CharField">std</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:41:52.180000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:41:52.180000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_2_C_gQEUF8m.jpg</field>
+        <field name="price" type="DecimalField">14500</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="22">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">89</field>
+        <field name="floor" type="PositiveIntegerField">1</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:42:07.159000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:42:07.159000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_2_P.jpg</field>
+        <field name="price" type="DecimalField">7890</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="23">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">47</field>
+        <field name="floor" type="PositiveIntegerField">15</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:42:41.018000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:42:41.018000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_4_P.jpg</field>
+        <field name="price" type="DecimalField">6790</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="24">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">one</field>
+        <field name="square" type="PositiveIntegerField">47</field>
+        <field name="floor" type="PositiveIntegerField">3</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.</field>
+        <field name="created" type="DateTimeField">2022-07-14T15:43:03.536000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-14T15:43:03.536000+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/14/1_room_plan_4_P_q9qPZVN.jpg</field>
+        <field name="price" type="DecimalField">6770</field>
+        <field name="discount" type="DecimalField">10</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">False</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="25">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">two</field>
+        <field name="square" type="PositiveIntegerField">100</field>
+        <field name="floor" type="PositiveIntegerField">9</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">2-комнатная квартира с ремонтом на последних этажах нового ЖК Парковый</field>
+        <field name="created" type="DateTimeField">2022-07-26T08:12:25.729843+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T08:12:25.729843+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/26/2-rooms_plan_4_P_tLPQ3ra.jpg</field>
+        <field name="price" type="DecimalField">8900</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="30"></object><object pk="33"></object><object pk="4"></object><object pk="38"></object><object pk="42"></object><object pk="36"></object></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="26">
+        <field name="apartment_complex" type="CharField">P</field>
+        <field name="quantity" type="CharField">two</field>
+        <field name="square" type="PositiveIntegerField">109</field>
+        <field name="floor" type="PositiveIntegerField">5</field>
+        <field name="type_acc" type="CharField">rms</field>
+        <field name="description" type="TextField">3- комнаты</field>
+        <field name="created" type="DateTimeField">2022-07-26T08:13:28.303091+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T08:13:28.303091+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/26/2-rooms-plan_1_P.jpg</field>
+        <field name="price" type="DecimalField">9000</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">5</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="35"></object><object pk="4"></object><object pk="5"></object><object pk="38"></object></field>
+    </object>
+    <object model="app_apartments.accommodation" pk="27">
+        <field name="apartment_complex" type="CharField">C</field>
+        <field name="quantity" type="CharField">ext</field>
+        <field name="square" type="PositiveIntegerField">217</field>
+        <field name="floor" type="PositiveIntegerField">24</field>
+        <field name="type_acc" type="CharField">dpx</field>
+        <field name="description" type="TextField">Двухуровненавая квартира на последнем этаже с видом на Центральную площадь города</field>
+        <field name="created" type="DateTimeField">2022-07-26T08:15:52.876401+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T08:15:52.876401+00:00</field>
+        <field name="plan" type="FileField">plan/2022/07/26/imgonline-com-ua-Replace-color-yWTUqr3uU8JhAxIR.jpg</field>
+        <field name="price" type="DecimalField">34000</field>
+        <field name="discount" type="DecimalField">0</field>
+        <field name="is_discount" type="BooleanField">False</field>
+        <field name="is_active" type="BooleanField">True</field>
+        <field name="residence" rel="ManyToOneRel" to="app_apartments.residencearea">4</field>
+        <field name="gallery" rel="ManyToManyRel" to="app_apartments.image"><object pk="26"></object></field>
+    </object>
+    <object model="app_apartments.image" pk="1">
+        <field name="title" type="CharField">Зал (1-однокомнатная)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/1_room_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T06:52:28.195360+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T06:52:28.195360+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="2">
+        <field name="title" type="CharField">Черновая (1-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/1_room_draft_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T06:52:57.024725+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T06:52:57.024725+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="3">
+        <field name="title" type="CharField">Санузел (1-вариант )</field>
+        <field name="image" type="FileField">gallery/2022/07/25/bathroom_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T06:53:19.037174+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T06:53:19.037174+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="4">
+        <field name="title" type="CharField">Кухня (1-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/kitchen_4.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T06:53:40.054674+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T06:53:40.054674+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="5">
+        <field name="title" type="CharField">Подьезд (1-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/entry_1.jpeg</field>
+        <field name="created" type="DateTimeField">2022-07-25T06:54:05.969983+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T06:54:05.969983+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="6">
+        <field name="title" type="CharField">ЖК Речник. Общий вид</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_General_view_1.jpeg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:52:31.691439+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:52:31.691439+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="7">
+        <field name="title" type="CharField">ЖК Речник. Общий вид (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_General_view_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:53:09.459453+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:53:09.459453+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="8">
+        <field name="title" type="CharField">ЖК Речник. Общий вид (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_General_view_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:53:21.911931+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:53:21.911931+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="9">
+        <field name="title" type="CharField">ЖК Речник. Двор</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_partio_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:54:21.266137+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:54:21.266137+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="10">
+        <field name="title" type="CharField">ЖК Речник. Двор (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_partio_1_5F5vaYx.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:54:35.545764+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:54:35.545764+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="11">
+        <field name="title" type="CharField">ЖК Речник. Двор (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_partio_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:54:58.093692+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:54:58.093692+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="12">
+        <field name="title" type="CharField">ЖК Речник. Двор (4)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_partio_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:55:12.923592+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:55:12.923592+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="13">
+        <field name="title" type="CharField">ЖК Речник. Подъезд 1</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_entry1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:55:40.269775+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:55:40.269775+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="14">
+        <field name="title" type="CharField">ЖК Речник. Подъезд 2</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_entry2.jpeg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:55:57.359764+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:55:57.359764+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="15">
+        <field name="title" type="CharField">ЖК Речник. Подъезд 3</field>
+        <field name="image" type="FileField">gallery/2022/07/25/RIVER_residence_entry3.jpeg</field>
+        <field name="created" type="DateTimeField">2022-07-25T11:56:09.762300+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T11:56:09.762300+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="16">
+        <field name="title" type="CharField">ЖК Центральный. Общий вид (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_general_view4.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:00:00.250455+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:00:00.250455+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="17">
+        <field name="title" type="CharField">ЖК Центральный. Общий вид (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_general_view3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:00:15.293277+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:00:15.293277+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="18">
+        <field name="title" type="CharField">ЖК Центральный. Общий вид (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_general_view1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:00:28.028602+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:00:28.028602+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="19">
+        <field name="title" type="CharField">ЖК Центральный. Двор (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_partio_10.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:00:54.251947+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:00:54.251947+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="20">
+        <field name="title" type="CharField">ЖК Центральный. Двор (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_partio_9.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:01:26.390894+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:01:26.390894+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="21">
+        <field name="title" type="CharField">ЖК Центральный. Двор (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_partio_7.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:01:39.961081+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:01:39.961081+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="22">
+        <field name="title" type="CharField">ЖК Центральный. Двор (4)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_partio_6.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:01:52.058002+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:01:52.058002+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="23">
+        <field name="title" type="CharField">ЖК Центральный. Подъезд (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_partio_5.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:02:13.009294+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:02:13.009294+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="24">
+        <field name="title" type="CharField">ЖК Центральный. Подъезд (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_entry_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:02:25.813122+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:02:25.813122+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="25">
+        <field name="title" type="CharField">ЖК Центральный. Подъезд (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_entry_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:02:38.833682+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:02:38.833682+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="26">
+        <field name="title" type="CharField">ЖК Центральный. Подъезд (4)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/CENTRAL_residence_entry_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:02:52.446217+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:02:52.446217+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="27">
+        <field name="title" type="CharField">ЖК Парковый. Общий вид (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_general_view3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:03:50.512807+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:03:50.512807+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="28">
+        <field name="title" type="CharField">ЖК Парковый. Общий вид (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_general_view1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:04:12.250943+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:04:12.250943+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="29">
+        <field name="title" type="CharField">ЖК Парковый. Двор (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_general_view2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:04:33.220021+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:04:33.220021+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="30">
+        <field name="title" type="CharField">ЖК Парковый. Двор (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_partio_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:04:47.092621+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:04:47.092621+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="31">
+        <field name="title" type="CharField">ЖК Парковый. Двор (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_partio_8.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:04:59.227139+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:04:59.227139+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="32">
+        <field name="title" type="CharField">ЖК Парковый. Подъезд (1)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_entry_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:05:24.924853+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:05:24.924853+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="33">
+        <field name="title" type="CharField">ЖК Парковый. Подъезд (2)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_entry_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:05:43.795544+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:05:43.795544+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="34">
+        <field name="title" type="CharField">ЖК Парковый. Подъезд (3)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_entry_4.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:05:54.764172+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:05:54.764172+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="35">
+        <field name="title" type="CharField">ЖК Парковый. Подъезд (4)</field>
+        <field name="image" type="FileField">gallery/2022/07/25/PARK_residence_entry_5.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-25T12:06:16.012186+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-25T12:06:16.012186+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="36">
+        <field name="title" type="CharField">Черновая (2-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/1_room_draft_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:20:50.905143+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:20:50.905143+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="37">
+        <field name="title" type="CharField">С ремонтом (1 вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/1_room_draft_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:21:30.414728+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:21:30.414728+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="38">
+        <field name="title" type="CharField">С ремонтом (2 вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/1_room_draft_4.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:22:07.439434+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:22:07.439434+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="39">
+        <field name="title" type="CharField">С ремонтом (двучуровн)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/1_room_draft_5.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:22:30.397139+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:22:30.397139+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="40">
+        <field name="title" type="CharField">С ремонтом (+3м)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/Hight_flat_draft_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:22:50.476479+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:22:50.476479+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="41">
+        <field name="title" type="CharField">Кухня (2-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/kitchen_2.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:25:07.070882+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:25:07.070882+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="42">
+        <field name="title" type="CharField">Санузел (2-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/bathroom_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:26:41.753207+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:26:41.753207+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="43">
+        <field name="title" type="CharField">Подьезд (3-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/entry_3_jF6HYyn.jpeg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:31:10.122344+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:31:10.122344+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="44">
+        <field name="title" type="CharField">Подьезд (2-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/entry_4.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:31:28.343519+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:31:28.343519+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="45">
+        <field name="title" type="CharField">Подьезд (4-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/entry_5.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:31:37.469203+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:31:37.469203+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="46">
+        <field name="title" type="CharField">Кухня (3-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/kitchen_3.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:32:25.700535+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:32:25.700535+00:00</field>
+    </object>
+    <object model="app_apartments.image" pk="47">
+        <field name="title" type="CharField">Кухня (4-вариант)</field>
+        <field name="image" type="FileField">gallery/2022/07/26/kitchen_1.jpg</field>
+        <field name="created" type="DateTimeField">2022-07-26T14:32:38.382942+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-26T14:32:38.382942+00:00</field>
+    </object>
+</django-objects>

@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}{{apartment}}{% endblock %}
+
+{% block content %}
+
+<div class="container" style="height:100%">
+
+    <h3 class="d-flex p-1  fw-bold text-secondary justify-content-end">{{apartment}}</h3>
+
+    <div class="row mt-4">
+        <!--    PLAN    -->
+        <div class="col-lg-3 col-md-12 offset-2 p-3 mx-1 ">
+            <a href="#main_image" data-bs-toggle="modal">
+                <img src="{{apartment.plan.url}}" alt="{{ apartment }}"
+                     class=" rounded-3 d-flex justify-content-center" style="width:15rem; height:13rem"></a>
+
+
+            <!--                MODAL MAIN IMAGE -->
+            <div class="modal fade" id="main_image">
+                <div class="modal-dialog modal-fullscreen-lg-down">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h4 class="modal-title">План {{apartment}}</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{apartment.plan.url}}" style="max-width:100%; max-height:100%">
+                        </div><!-- /.modal-body -->
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!--                MODAL MAIN IMAGE -->
+
+
+            <!--GALLERY -->
+            <div class="container">
+                <ul class="nav nav-pills nav-stacked">
+                    {% for image in apartment.gallery.all %}
+                    <li>
+                        <a href="#lightbox"
+                           data-bs-toggle="modal"
+                           data-slide-to="{{ forloop.counter }}">
+                            <img src="{{image.image.url}}"
+                                 style="width:1.5rem;height:1.5rem;margin:0.5rem;border-radius: 6px;">
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="modal fade and carousel " id="lightbox">
+                    <div class="modal-dialog  modal-dialog-centered modal-fullscreen-lg-down">
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <div data-bs-target="#lightbox" class="carousel " data-bs-ride="carousel">
+
+                                    <div class="carousel-inner">
+                                        {% for image in apartment.gallery.all %}
+
+                                        <div class="carousel-item {% if forloop.counter == 1 %}
+                                        active
+                                        {% endif %}"
+                                             id="slide{{forloop.counter}}">
+                                            <div class="bg-light text-dark fw-bold"
+                                            >
+                                                <h4>{{image.title}}</h4>
+                                            </div>
+                                            <img src="{{ image.image.url }}" class="card-image ">
+                                        </div>
+
+                                        {% endfor %}
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#lightbox" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                            data-bs-target="#lightbox" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                            </div><!-- /.modal-body -->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div><!-- /.container -->
+            <!--  GALLERY -->
+
+
+        </div>
+        <!--   PLAN    -->
+
+        <!--   INFO    -->
+        <div class="col-lg-4 col-md-12 p-3  mx-1 ">
+            <div class="row ">
+                <div class="col col-6 m-1 py-1 text-end">ЖИЛОЙ КОМПЛЕКС</div>
+                <div class="col col-5 m-1 py-1  text-start">
+                    {{apartment.get_apartment_complex_display}}
+                </div>
+                <hr>
+                <div class="col col-6 m-1 py-1 text-end">ТИП</div>
+                <div class="col col-5 m-1 py-1  text-start">
+                    {{apartment.get_type_acc_display}}
+                </div>
+                <div class="col col-6 m-1 py-1 text-end">КОМНАТ</div>
+                <div class="col col-5 m-1 py-1  text-start">
+                    {{apartment.get_quantity_display}}
+                </div>
+                <div class="col col-6 m-1 py-1 text-end">ЭТАЖ</div>
+                <div class="col col-5 m-1 py-1  text-start">{{apartment.floor}}
+                </div>
+                <div class="col col-6 m-1 py-1 text-end">ПЛОЩАДЬ</div>
+                <div class="col col-5 m-1 py-1  text-start">{{apartment.square}}
+                    м.кв.
+                </div>
+                <hr>
+                <div class="col col-6 m-1 py-1 text-end">ЦЕНА</div>
+                <div class="col col-5 m-1 py-1   text-start">
+                    {{apartment.get_current_price}} тыс.руб.
+                </div>
+
+                {% if apartment.discount %}
+                <hr>
+                <div class="col col-6 m-1 py-1 text-end">СКИДКА</div>
+                <div class="col col-5 m-1 py-1   text-start">
+                    <b>{{apartment.discount}}%</b>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <!--   INFO    -->
+
+        <div class="col-lg-4  col-md-12 p-3 mx-1 ">
+            <div class="row">
+                <div class="col-12 my-2" style="height:12rem">
+                    {{apartment.description}}
+                </div>
+                <div class="col-12 my-2" style="height:3rem">
+                    <div class="row">
+                        <hr>
+
+                        <div class="col-lg-6 col-md-12 ">
+                            <input type="button" class="btn btn-success w-100" id="order" data-bs-toggle="modal"
+                                   data-bs-target="#send_request" data-bs-whatever="@mdo" value="Забронировать">
+                        </div>
+
+                        <div class="col-lg-6 ">
+                            <form id="add_flat" action="." method="post">
+                                {% csrf_token %}
+                                {% if request.session.favorites.keys|length > 0 %}
+                                {% if apartment.id|stringformat:'i' in request.session.favorites.keys %}
+                                <input type="submit" class="btn-check" id="btn-check-2"
+                                       formaction="{% url 'app_favorites:remove' pk=apartment.id %}" checked
+                                       autocomplete="off">
+                                <label class="btn btn-warning w-100" for="btn-check-2">В избранном</label>
+
+                                {% else %}
+                                <input type="submit" class="btn-check" style="width:11rem" id="btn-check-3"
+                                       formaction="{% url 'app_favorites:add' pk=apartment.id %}" checked
+                                       autocomplete="off">
+                                <label class="btn btn-outline-secondary w-100" for="btn-check-3">В
+                                    избранное</label>
+                                {% endif %}
+                                {% else %}
+                                <input type="submit" class="btn-check" id="btn-check-4" style="width:11rem"
+                                       formaction="{% url 'app_favorites:add' pk=apartment.id %}" checked
+                                       autocomplete="off">
+                                <label class="btn btn-outline-secondary w-100" for="btn-check-4">В
+                                    избранное</label>
+                                {% endif %}
+                            </form>
+                        </div>
+
+
+                        <!--        MODAL WINDOW SEND MESSAGE  RESERVATION FLAT        -->
+                        <div class="modal fade" id="send_request" tabindex="-1" aria-labelledby="send_request_label"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered  modal-fullscreen-lg-down">
+                                <div class="modal-content">
+                                    <form method="post" id="modal_message_reserve" action=".">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="send_request_label">
+                                                Заявка на бронирование
+                                                квартиры<br>{{apartment}}</h5>
+                                        </div>
+                                        <div class="modal-body" id="modal_body">
+                                            {% csrf_token %}
+                                            <div class="mb-3">
+                                                <label for="email">
+                                                    <i class="fa fa-lg fa-envelope m-2" aria-hidden="true"></i>
+                                                    Адрес электронной почты
+                                                </label>
+                                                <input required id="email" type="email" name="email"
+                                                       class="form-control" placeholder="name@example.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="telephone" class="col-form-label">
+                                                    <i class="fa fa-lg fa-phone m-2" aria-hidden="true"></i>
+                                                    Телефон
+                                                </label>
+                                                <input required type="tel" name="telephone" id="telephone"
+                                                       class="form-control" placeholder="+7 (___) ___-__-__">
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" required class="form-check-input" name="approval"
+                                                       id="approval">
+                                                <label class="form-check-label fs-6" for="approval">
+                                                    <small>Я согласен на обработку моих персональных данных.</small>
+                                                </label>
+                                            </div>
+                                            <div id="content">
+
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Х
+                                                Закрыть
+                                            </button>
+                                            <button type="submit" id="create_request" data-bs-dismiss="modal"
+                                                    class="btn btn-success">
+                                                Отправить заявку
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div><!-- modal-content -->
+                            </div><!-- modal-dialog -->
+                        </div><!-- modal -->
+                        <!--        MODAL WINDOW SEND MESSAGE  RESERVATION FLAT        -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+

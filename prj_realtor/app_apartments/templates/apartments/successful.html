@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+
+{% block title %}Ваша заявка принята{% endblock %}
+
+{% block content %}
+<div class="container mt-5 collapsing" style="height:800px">
+    <div class="row   d-flex justify-content-center align-items-center" style="height:30rem">
+        <div class="col-lg-4 col-md-12">
+            <div class="card text-center  rounded-2">
+                <h5 class="card-header"></h5>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <i class="fa fa-4x fa-check-circle mx-3 d-flex justify-content-center align-items-center "
+                           aria-hidden="true" style="color:green"></i>Ваша заявка принята</h4>
+                    <p class="card-text">Ближайшее время Вами свяжется наш специалист</p>
+                    <a class="btn btn-outline-secondary m-2 rounded-2 shaker "
+                       href="{% url 'app_apartments:list_apartment' %}">
+                        вернуться к списку квартир</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

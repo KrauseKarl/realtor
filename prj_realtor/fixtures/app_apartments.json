@@ -1,0 +1,482 @@
+[
+{
+    "model": "app_apartments.accommodation",
+    "pk": 1,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 3,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:16:03.770Z",
+        "updated": "2022-07-13T15:16:03.771Z",
+        "plan": "plan/2022/07/13/1-rooms-plan_1.jpg",
+        "price": "6500",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": true,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 2,
+    "fields": {
+        "quantity": "one",
+        "square": 89,
+        "floor": 4,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:17:04.039Z",
+        "updated": "2022-07-13T15:17:04.039Z",
+        "plan": "plan/2022/07/13/1-rooms-plan_2.jpg",
+        "price": "8700",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": true,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 3,
+    "fields": {
+        "quantity": "two",
+        "square": 109,
+        "floor": 5,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:17:39.422Z",
+        "updated": "2022-07-13T15:17:39.422Z",
+        "plan": "plan/2022/07/13/2-rooms-plan_1.jpg",
+        "price": "12000",
+        "discount": "10",
+        "is_discount": true,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 4,
+    "fields": {
+        "quantity": "two",
+        "square": 81,
+        "floor": 2,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:18:18.830Z",
+        "updated": "2022-07-13T15:18:18.830Z",
+        "plan": "plan/2022/07/13/2-rooms-plan_2.jpg",
+        "price": "10900",
+        "discount": "10",
+        "is_discount": true,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 5,
+    "fields": {
+        "quantity": "thr",
+        "square": 146,
+        "floor": 3,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:18:57.688Z",
+        "updated": "2022-07-13T15:18:57.688Z",
+        "plan": "plan/2022/07/13/3-rooms-plan_1.jpg",
+        "price": "14500",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 6,
+    "fields": {
+        "quantity": "thr",
+        "square": 119,
+        "floor": 4,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:19:36.021Z",
+        "updated": "2022-07-13T15:19:36.021Z",
+        "plan": "plan/2022/07/13/3-rooms-plan_2.jpg",
+        "price": "14499",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 7,
+    "fields": {
+        "quantity": "one",
+        "square": 217,
+        "floor": 10,
+        "apartment_complex": "R",
+        "type_acc": "dpx",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:20:35.733Z",
+        "updated": "2022-07-13T15:20:35.733Z",
+        "plan": "plan/2022/07/13/Duplex-plan_1.jpg",
+        "price": "24000",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 8,
+    "fields": {
+        "quantity": "thr",
+        "square": 121,
+        "floor": 10,
+        "apartment_complex": "R",
+        "type_acc": "dpx",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:21:18.350Z",
+        "updated": "2022-07-13T15:21:18.350Z",
+        "plan": "plan/2022/07/13/Duplex-plan_2.jpg",
+        "price": "25900",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 9,
+    "fields": {
+        "quantity": "zro",
+        "square": 33,
+        "floor": 6,
+        "apartment_complex": "R",
+        "type_acc": "std",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:21:59.138Z",
+        "updated": "2022-07-13T15:21:59.138Z",
+        "plan": "plan/2022/07/13/1-studio_plan_1.jpg",
+        "price": "3400",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 10,
+    "fields": {
+        "quantity": "zro",
+        "square": 26,
+        "floor": 7,
+        "apartment_complex": "R",
+        "type_acc": "std",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:22:34.480Z",
+        "updated": "2022-07-13T15:22:34.480Z",
+        "plan": "plan/2022/07/13/1-studio_plan_2.jpg",
+        "price": "3800",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 11,
+    "fields": {
+        "quantity": "one",
+        "square": 64,
+        "floor": 24,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:16:03.770Z",
+        "updated": "2022-07-13T15:16:03.771Z",
+        "plan": "plan/2022/07/13/1-rooms-plan_1.jpg",
+        "price": "6450",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": true,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 12,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 18,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:16:03.770Z",
+        "updated": "2022-07-13T15:16:03.771Z",
+        "plan": "plan/2022/07/13/1-rooms-plan_1.jpg",
+        "price": "6000",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": true,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 13,
+    "fields": {
+        "quantity": "two",
+        "square": 109,
+        "floor": 14,
+        "apartment_complex": "R",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-13T15:17:39.422Z",
+        "updated": "2022-07-13T15:17:39.422Z",
+        "plan": "plan/2022/07/13/2-rooms-plan_1.jpg",
+        "price": "11600",
+        "discount": "10",
+        "is_discount": true,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 14,
+    "fields": {
+        "quantity": "one",
+        "square": 64,
+        "floor": 2,
+        "apartment_complex": "C",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:38:58.247Z",
+        "updated": "2022-07-14T15:38:58.247Z",
+        "plan": "plan/2022/07/14/1_room_plan_1_C.jpg",
+        "price": "8900",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 15,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 12,
+        "apartment_complex": "C",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:39:23.305Z",
+        "updated": "2022-07-14T15:39:23.305Z",
+        "plan": "plan/2022/07/14/1_room_plan_1_C_Zzch2x0.jpg",
+        "price": "9100",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 16,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 3,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:39:44.039Z",
+        "updated": "2022-07-14T15:39:44.039Z",
+        "plan": "plan/2022/07/14/1_room_plan_1_P.jpg",
+        "price": "8760",
+        "discount": "10",
+        "is_discount": true,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 17,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 9,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:40:02.253Z",
+        "updated": "2022-07-14T15:40:02.253Z",
+        "plan": "plan/2022/07/14/1_room_plan_1_P_ssZaRSU.jpg",
+        "price": "6790",
+        "discount": "10",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 18,
+    "fields": {
+        "quantity": "one",
+        "square": 65,
+        "floor": 13,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:40:20.172Z",
+        "updated": "2022-07-14T15:40:20.172Z",
+        "plan": "plan/2022/07/14/1_room_plan_1_P_10vqPJS.jpg",
+        "price": "6770",
+        "discount": "10",
+        "is_discount": true,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 19,
+    "fields": {
+        "quantity": "one",
+        "square": 89,
+        "floor": 4,
+        "apartment_complex": "C",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:41:16.702Z",
+        "updated": "2022-07-14T15:41:16.702Z",
+        "plan": "plan/2022/07/14/1_room_plan_2_C.jpg",
+        "price": "9900",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 20,
+    "fields": {
+        "quantity": "one",
+        "square": 89,
+        "floor": 19,
+        "apartment_complex": "C",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:41:35.448Z",
+        "updated": "2022-07-14T15:41:35.448Z",
+        "plan": "plan/2022/07/14/1_room_plan_2_C_cZaVqab.jpg",
+        "price": "12300",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 21,
+    "fields": {
+        "quantity": "one",
+        "square": 89,
+        "floor": 23,
+        "apartment_complex": "C",
+        "type_acc": "std",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:41:52.180Z",
+        "updated": "2022-07-14T15:41:52.180Z",
+        "plan": "plan/2022/07/14/1_room_plan_2_C_gQEUF8m.jpg",
+        "price": "14500",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 22,
+    "fields": {
+        "quantity": "one",
+        "square": 89,
+        "floor": 1,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:42:07.159Z",
+        "updated": "2022-07-14T15:42:07.159Z",
+        "plan": "plan/2022/07/14/1_room_plan_2_P.jpg",
+        "price": "7890",
+        "discount": "10",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 23,
+    "fields": {
+        "quantity": "one",
+        "square": 47,
+        "floor": 15,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:42:41.018Z",
+        "updated": "2022-07-14T15:42:41.018Z",
+        "plan": "plan/2022/07/14/1_room_plan_4_P.jpg",
+        "price": "6790",
+        "discount": "0",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+},
+{
+    "model": "app_apartments.accommodation",
+    "pk": 24,
+    "fields": {
+        "quantity": "one",
+        "square": 47,
+        "floor": 3,
+        "apartment_complex": "P",
+        "type_acc": "rms",
+        "description": "1-комнатная  квартира. Общая площадь 47 м.кв., ванная комната - 4.9 м.кв., спальня - 14 м.кв. Окна выхродят во двор.",
+        "created": "2022-07-14T15:43:03.536Z",
+        "updated": "2022-07-14T15:43:03.536Z",
+        "plan": "plan/2022/07/14/1_room_plan_4_P_q9qPZVN.jpg",
+        "price": "6770",
+        "discount": "10",
+        "is_discount": false,
+        "is_active": false,
+        "gallery": []
+    }
+}
+]

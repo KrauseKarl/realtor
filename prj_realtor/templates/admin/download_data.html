@@ -1,0 +1,24 @@
+{% extends 'admin/base.html' %}
+{% block object-tools %}
+<div>
+    <form action="." method="POST" enctype="multipart/form-data"
+          style="position:relative;text-align:center;">
+        {% csrf_token %}
+        <h1 style="text-align:right; margin-bottom:5rem;margin-top:5rem">Выгрузить базу данных приложения</h1><hr>
+        <div style="display:inline-block;
+              padding:20px;
+              position:relative;
+              width:60rem;
+              margin-top:1rem;
+              font-size:20px">Выберите формат
+            <input name="format" type="radio" id="json_radio_btn" value="json" style="margin:1rem">JSON
+            <input name="format" type="radio" id="xlm_radio_btn" value="xml" style="margin:1rem">XML
+            <input name="format" type="radio" id="yaml _radio_btn" value="yaml" style="margin:1rem">YAML
+            <input name="file_name" type="text" id="file_name_field" style="margin:1rem; padding:0.7rem" size="24rem"
+                   placeholder="Название файла ... ">
+
+            <input type="submit" value="Импорт" style="font-size:14px; width:10rem"></div><hr>
+    </form>
+</div>
+
+{% endblock %}

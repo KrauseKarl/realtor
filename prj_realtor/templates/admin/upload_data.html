@@ -1,0 +1,23 @@
+{% extends 'admin/base.html' %}
+{% block object-tools %}
+<div>
+    <form action="." method="POST" enctype="multipart/form-data"
+          style="position:relative;text-align:center;">
+        {% csrf_token %}
+        <h1 style="text-align:right; margin-bottom:5rem;margin-top:5rem">Загрузить базу данных приложения</h1>
+        <hr>
+        <div style="display:inline-block;
+                  padding:20px;
+                  position:relative;
+                  font-size:20px">
+            <label for='load_fixture' style="font-size:20px; width:10rem">
+                Выберите файл <small>('.json', '.xml', '.yaml')</small></label>
+            <input type="file" id='load_fixture'required name="file"
+                   style="font-size:19px; width:20rem; margin-left:5rem">
+            <input type="submit" value="Импорт" style="font-size:14px; width:10rem">
+        </div>
+        <hr>
+    </form>
+</div>
+{{ block.super }}
+{% endblock %}

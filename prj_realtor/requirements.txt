@@ -1,0 +1,15 @@
+asgiref==3.5.2
+certifi==2022.6.15
+charset-normalizer==2.1.0
+Django==4.0
+django-debug-toolbar==3.5.0
+idna==3.3
+Pillow==8.4.0
+pypiwin32==223
+pywin32==304
+PyYAML==6.0
+requests==2.28.1
+sqlparse==0.4.2
+tzdata==2022.1
+urllib3==1.26.10
+win10toast==0.9

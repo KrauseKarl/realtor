@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% block title %}{{residence}}{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!--        SLIDER -->
+        <div class="col-lg-8 col-md-12 mb-3">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide carousel-fade"
+                 style="height:400px; width:700px" data-bs-touch="false"
+                 data-bs-interval="false">
+
+
+                <div class="carousel-inner">
+                    {% for img in residence.gallery.all %}
+                    {% if forloop.counter == 1 %}
+                    <div class="carousel-item  active"
+                         id="slide1">
+                        <img src="{{img.image.url}}" class="d-block"
+                             style="height:400px; width:680px" alt="...">
+                    </div>
+                    {% else %}
+                    <div class="carousel-item "
+                         id="slide{{forloop.counter}}">
+                        <img src="{{img.image.url}}" class="d-block"
+                             style="height:400px; width:680px" alt="...">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+        <!--        SLIDER -->
+
+        <!--INFO GRAPHIC -->
+        <div class="col-lg-4 col-md-12 mb-3">
+            <div class="row">
+
+                <!--       TITLE         -->
+                <div class="col-12  text-end fs-3 ">
+                    {{residence.get_title_display}}
+                    <hr>
+                </div>
+                <!--       TITLE         -->
+
+                <!--       FLAT TYPE         -->
+                <div class="col-12 ">
+                    <div class="row d-flex justify-content-evenly text-end p-1" style="height:19rem">
+                        <div class="col-12 text-end fs-5">
+                            {{residence.accommodations.count}} квартир продаются<br>
+                        </div>
+
+                        {% if studio > 0%}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            <div class="fw-bold">студия</div>
+                            <div>от {{studio_sqr.square}} м&#178;</div>
+                            <div>{{studio}} шт</div>
+                        </div>
+                        {% endif %}
+
+                        {% if 1_room > 0%}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            <div class="fw-bold">1К</div>
+                            <div>от {{1_room_sqr.square}} м&#178;</div>
+                            <div>{{1_room}} шт</div>
+                        </div>
+                        {% endif %}
+
+                        {% if 2_room > 0 %}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            <div class="fw-bold">2К</div>
+                            <div> от {{2_room_sqr.square}} м&#178;</div>
+                            <div> {{2_room}} шт</div>
+                        </div>
+                        {% endif %}
+
+                        {% if 3_room > 0 %}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            <div class="fw-bold">3К</div>
+                            <div>от {{3_room_sqr.square}} м&#178;</div>
+                            <div>{{3_room}} шт</div>
+                        </div>
+                        {% endif %}
+
+                        {% if HighFlat > 0 %}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            %}
+                            <div class="fw-bold">+3 метра</div>
+                            <div>от {{HighFlat_sqr.square}} м&#178;</div>
+                            <div>{{HighFlat}} шт</div>
+                        </div>
+                        {% endif %}
+
+                        {% if Duplex > 0%}
+                        <div class="col-3 card mx-1 p-3 shadow" style="max-height:7rem;width:7rem; border-radius: 10px">
+                            <div class="fw-bold">2-уровня</div>
+                            <div>от {{Duplex_sqr.square}} м&#178;</div>
+                            <div>{{Duplex}} шт</div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!--       FLAT TYPE          -->
+
+            </div>
+        </div>
+        <!--INFO GRAPHIC -->
+
+        <!--description -->
+        <div class="card shadow  px-5  p-3 m-0  mb-3 "
+             style="border-radius: 10px">
+            {{residence.description}}
+        </div>
+        <!--description -->
+
+        <div class="col-lg-12 mb-3">
+
+            <!--       OTHER INFO         -->
+            <div class="row d-flex justify-content-between mb-3 text-center">
+                {% if school > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-graduation-cap" aria-hidden="true"></i>школы <p>{{school}}</p>
+                </div>
+                {% endif %}
+                {% if shop > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-shopping-bag" aria-hidden="true"></i>магазины<p>{{shop}}</p>
+                </div>
+                {% endif %}
+                {% if bank > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-money" aria-hidden="true"></i>банки<p>{{bank}}</p>
+                </div>
+                {% endif %}
+                {% if kindergarten > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-child" aria-hidden="true"></i>дет.сады<p>{{kindergarten}}</p>
+                </div>
+                {% endif %}
+                {% if post > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-envelope-o" aria-hidden="true"></i>почта<p>{{post}}</p>
+                </div>
+                {% endif %}
+                {% if spy > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-female" aria-hidden="true"></i>салоны<p>{{spy}}</p>
+                </div>
+                {% endif %}
+                {% if fitness_club > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-futbol-o" aria-hidden="true"></i>спортзал<p>{{fitness_club}}</p>
+                </div>
+                {% endif %}
+
+                {% if park > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-tree" aria-hidden="true"></i>парки<p>{{park}}</p>
+                </div>
+                {% endif %}
+                {% if cinema > 0 %}
+                <div style="max-height:9rem;width:7rem; border-radius: 59px" class="col-5 card p-3 shadow">
+                    <i class="fa fa-2x fa-film" aria-hidden="true"></i>кино<p>{{cinema}}</p>
+                </div>
+                {% endif %}
+            </div><!-- row -->
+            <!--       OTHER INFO         -->
+
+            <div class="col-lg-12 col-md-12 mb-3">
+                <!--     MAP  -->
+                <div class="rounded-3 p-1 shadow mb-3 w-100" style="max-height:100%; max-width:100%">
+                    <script type="text/javascript" charset="utf-8"
+                            async src="{{residence.map}}"></script>
+                </div>
+                <!--     MAP  -->
+            </div>
+
+
+        </div>  <!-- row -->
+    </div>  <!-- container -->
+
+    {% endblock %}

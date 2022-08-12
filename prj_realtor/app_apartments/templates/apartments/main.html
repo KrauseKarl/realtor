@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}{% trans 'main page' %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="d-flex  fw-bold text-secondary justify-content-end ">
+        Arctic development
+    </h3>
+    <div class="card-group">
+        <div class="card shadow m-1">
+             <div class="card-header bg-transparent ">ЖК Парковый</div>
+            <div class="card-body">
+                 <img src="media/gallery/2022/07/25/PARK_residence_general_view3.jpg" class="card-img-top"
+                 style="height:100%" alt="...">
+            </div>
+          <div class="card-footer bg-transparent">
+                <a class="btn" href="{% url 'app_apartments:residence_apartment' 'park' %}">подробнее</a>
+            </div>
+        </div>
+        <div class="card shadow m-1">
+          <div class="card-header bg-transparent ">ЖК Речник</div>
+            <div class="card-body">
+              <img src="media/gallery/2022/07/25/RIVER_residence_General_view_1.jpeg" class="card-img-top"
+                 style="height:100%" alt="...">
+            </div>
+            <div class="card-footer bg-transparent">
+                <a class="btn" href="{% url 'app_apartments:residence_apartment' 'river' %}">подробнее</a>
+            </div>
+        </div>
+        <div class="card shadow m-1">
+            <div class="card-header bg-transparent ">ЖК Центральный</div>
+            <div class="card-body">
+                <img src="media/gallery/2022/07/25/CENTRAL_residence_general_view3.jpg" class="card-img-top"
+                     style="height:100%" alt="...">
+            </div>
+            <div class="card-footer bg-transparent">
+                <a class="btn" href="{% url 'app_apartments:residence_apartment' 'central' %}">подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

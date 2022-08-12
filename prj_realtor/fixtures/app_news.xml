@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="app_news.news" pk="1">
+        <field name="title" type="CharField">Лед тронулся. Заливаем фундамент</field>
+        <field name="text" type="TextField">Наша бригада сторителей начали заливать фундамент дома первой очереди ЖК Речник.  Срок сдачи дома намечен на 3 квартал 2024 года.</field>
+        <field name="created" type="DateTimeField">2022-07-12T10:14:29.229000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T10:14:29.229000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/2512b_54f0.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="1"></object><object pk="4"></object></field>
+    </object>
+    <object model="app_news.news" pk="2">
+        <field name="title" type="CharField">Стройка GO ON!</field>
+        <field name="text" type="TextField">Продолжаем строительство первой очереди ЖК Речник ЖК Речник</field>
+        <field name="created" type="DateTimeField">2022-07-12T11:10:46.175000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T11:10:46.175000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/under_constract_3.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="1"></object><object pk="5"></object></field>
+    </object>
+    <object model="app_news.news" pk="3">
+        <field name="title" type="CharField">ВЫходим на финишь. ЖК Речник</field>
+        <field name="text" type="TextField">До ввода в эксплатацую осталось месяц. Новоселам приготовиться!</field>
+        <field name="created" type="DateTimeField">2022-07-12T11:11:39.678000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T11:11:39.678000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/under_constract_2.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"></field>
+    </object>
+    <object model="app_news.news" pk="4">
+        <field name="title" type="CharField">Мы это сделали!!!</field>
+        <field name="text" type="TextField">Вчера началась выдача ключей первым собственникам квартир в ЖК Речник</field>
+        <field name="created" type="DateTimeField">2022-07-12T11:12:25.608000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T11:12:25.609000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/key_2.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="1"></object><object pk="6"></object></field>
+    </object>
+    <object model="app_news.news" pk="5">
+        <field name="title" type="CharField">Запахи своей новой квартиры - бесценены )</field>
+        <field name="text" type="TextField">Первые жильцы уже начали въезжать в свои квартиры. Шум перфоратора не слышен, потому что мы строи "под ключ".</field>
+        <field name="created" type="DateTimeField">2022-07-12T11:17:19.859000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T11:17:19.859000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/relocation_5.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="1"></object><object pk="7"></object></field>
+    </object>
+    <object model="app_news.news" pk="6">
+        <field name="title" type="CharField">Очередь - сдавайся!</field>
+        <field name="text" type="TextField">Сегодня офицальносдали вторую очередь ЖК Цетральный. Новоселов ждем за ключами.</field>
+        <field name="created" type="DateTimeField">2022-07-12T14:30:47.914000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T14:30:47.914000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/key_3.jpeg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="3"></object><object pk="6"></object><object pk="7"></object></field>
+    </object>
+    <object model="app_news.news" pk="7">
+        <field name="title" type="CharField">Класть или ложить?</field>
+        <field name="text" type="TextField">Arctic Development начало разработкку проекта четвертой очереди ЖК Парковый. Планируется приступить к заливки фундамента в 3 квартале 2023.</field>
+        <field name="created" type="DateTimeField">2022-07-12T14:32:42.950000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T14:32:42.950000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/under_constract_3_jFwWcrm.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="2"></object><object pk="8"></object></field>
+    </object>
+    <object model="app_news.news" pk="8">
+        <field name="title" type="CharField">Проект утвержден. 4 очереди быть.</field>
+        <field name="text" type="TextField">ЖК Парковый расширется еще на три дома. Цены на дне. Подбираем.</field>
+        <field name="created" type="DateTimeField">2022-07-12T14:33:47.038000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T14:33:47.038000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/under_constract_3_vrP1fTK.jpg</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="2"></object><object pk="4"></object></field>
+    </object>
+    <object model="app_news.news" pk="9">
+        <field name="title" type="CharField">День открытых дверей</field>
+        <field name="text" type="TextField">Приглашаем все хителей и госте города на день открытых двереь. Только здесь квартиры можно купить по спец. предложению. Торопитесь. Таких цен нет даже на сайте.</field>
+        <field name="created" type="DateTimeField">2022-07-12T14:35:11.312000+00:00</field>
+        <field name="updated" type="DateTimeField">2022-07-12T14:35:11.312000+00:00</field>
+        <field name="is_published" type="BooleanField">True</field>
+        <field name="image" type="FileField">news_img/2022/07/12/news_1.webp</field>
+        <field name="hashtag" rel="ManyToManyRel" to="app_news.tag"><object pk="1"></object><object pk="2"></object><object pk="3"></object></field>
+    </object>
+    <object model="app_news.tag" pk="1">
+        <field name="tag_name" type="CharField">ЖК Речник</field>
+        <field name="slug" type="SlugField">zhk-rechnik</field>
+    </object>
+    <object model="app_news.tag" pk="2">
+        <field name="tag_name" type="CharField">ЖК Парковый</field>
+        <field name="slug" type="SlugField">zhk-parkovyj</field>
+    </object>
+    <object model="app_news.tag" pk="3">
+        <field name="tag_name" type="CharField">ЖК Центральный</field>
+        <field name="slug" type="SlugField">zhk-centralnyj</field>
+    </object>
+    <object model="app_news.tag" pk="4">
+        <field name="tag_name" type="CharField">Выдача ключей</field>
+        <field name="slug" type="SlugField">vydacha-klyuchej</field>
+    </object>
+    <object model="app_news.tag" pk="5">
+        <field name="tag_name" type="CharField">Проект</field>
+        <field name="slug" type="SlugField">proekt</field>
+    </object>
+    <object model="app_news.tag" pk="6">
+        <field name="tag_name" type="CharField">Сдан</field>
+        <field name="slug" type="SlugField">sdan</field>
+    </object>
+    <object model="app_news.tag" pk="7">
+        <field name="tag_name" type="CharField">Стройка</field>
+        <field name="slug" type="SlugField">strojka</field>
+    </object>
+    <object model="app_news.tag" pk="8">
+        <field name="tag_name" type="CharField">Фундамент</field>
+        <field name="slug" type="SlugField">fundament</field>
+    </object>
+</django-objects>

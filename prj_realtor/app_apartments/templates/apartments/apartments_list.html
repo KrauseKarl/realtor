@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}Информация о компании{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 class="d-flex   fw-bold text-secondary justify-content-end">Квартиры
+        <a href="{% url 'app_rss:rss_flat' %}"
+           class="text-decoration-none btn  btn-sm rounded-3 fs-6 m-1 px-2">
+            <i class="fa fa-rss-square" aria-hidden="true"></i>
+            RSS
+        </a>
+    </h3>
+
+
+    <!--            SEARCH DASHBOARD    -->
+    <form method="get">
+        <div class="row  p-2 fw-bold text-center">
+            <!--           COMPLEX         -->
+            <div class="col-lg-2 col-md-12  my-2">
+                <select class="form-select w-100 " style="form-text-color:grey" name="apartment_complex"
+                        aria-label="apartment_complex">
+                    <option value="" disabled selected hidden>Выберите ЖК</option>
+                    <option value="C">ЖК Центральный</option>
+                    <option value="R">ЖК Речник</option>
+                    <option value="P">ЖК Парковый</option>
+                </select>
+            </div>
+            <!--           COMPLEX         -->
+
+            <!--          ROOMS          -->
+            <div class="col-lg-5 col-md-12  my-2 fw-lighter border rounded-2 py-1">ТИП
+                <div class="form-radio form-check-inline ">
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox1" value="zro">
+                    <label class="form-check-label" for="inlineCheckbox1">C</label>
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox2" value="one">
+                    <label class="form-check-label" for="inlineCheckbox2">1К</label>
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox3" value="two">
+                    <label class="form-check-label" for="inlineCheckbox3">2К</label>
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox4" value="thr">
+                    <label class="form-check-label" for="inlineCheckbox4">3К</label>
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox5" value="hgt">
+                    <label class="form-check-label" for="inlineCheckbox5">+3m</label>
+                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                           id="inlineCheckbox6" value="ext">
+                    <label class="form-check-label" for="inlineCheckbox5">2ЭТ</label>
+                </div>
+            </div>
+            <!--          ROOMS          -->
+
+            <!--      ORDERING      -->
+            <div class="col-lg-2 col-md-12  my-2 ">
+                <select class="form-select  " style="form-text-color:grey" name="sort"
+                        aria-label="apartment_complex">
+                    <option value="" disabled selected hidden>Сортировать по ..</option>
+                    <option value="price">возрастанию цены</option>
+                    <option value="-price">убыванию цены</option>
+                    <option value="square">возрастанию площади</option>
+                    <option value="-square">убыванию площади</option>
+
+                </select>
+            </div>
+            <!--     ORDERING       -->
+
+            <!--          BUTTON          -->
+            <div class="col-lg-3 col-md-12  my-2 ">
+                <input class="btn btn-outline-secondary fw-bold  rounded-3" style="width:7rem" type="submit"
+                       value="НАЙТИ">
+                <a class="btn btn-outline-secondary fw-bold  rounded-3"
+                   href="{% url 'app_apartments:list_apartment' %}" style="width:7rem">СБРОСИТЬ</a>
+
+            </div>
+            <!--          BUTTON          -->
+
+
+            <!--          SQUARE          -->
+            <div class="col-lg-3 col-md-12  my-2">
+                <div class="input-group">
+                    <span class="input-group-text rounded-3">S m&#178;</span>
+                    <input type="text" name="square_min" placeholder="33 м.кв." aria-label="min"
+                           class="form-control rounded-3 ">
+                    <input type="text" name="square_max" placeholder="250 м.кв." aria-label="max"
+                           class="form-control rounded-3">
+                </div>
+            </div>
+            <!--          SQUARE          -->
+
+            <!--          PRICE          -->
+            <div class="col-lg-3 col-md-12  my-2">
+                <div class="input-group">
+                    <span class="input-group-text rounded-3 "><i class="fa fa-rub" aria-hidden="true"></i> тыс.</span>
+                    <input type="text" placeholder="от " name="price_min" aria-label="min"
+                           class="form-control rounded-3   ">
+                    <input type="text" placeholder="до " name="price_max" aria-label="max"
+                           class="form-control rounded-3   ">
+                </div>
+            </div>
+            <!--          PRICE          -->
+
+            <!--          FLOOR          -->
+            <div class="col-lg-2 col-md-12  my-2 ">
+                <div class="input-group">
+                    <span class="input-group-text rounded-3">ЭТАЖ</span>
+
+                    <input type="text" name="floor_min" placeholder="1" aria-label="min"
+                           class="form-control rounded-3">
+                    <input type="text" name="floor_max" placeholder="25" aria-label="max"
+                           class="form-control rounded-3">
+                </div>
+            </div>
+            <!--          FLOOR          -->
+
+            <!--      TYPE   -->
+            <div class="col-lg-2 col-md-12  my-2">
+                <select class="form-select w-100 " style="form-text-color:grey" name="type_acc"
+                        aria-label="apartment_complex">
+                    <option value="" disabled selected hidden>ТИП</option>
+                    <option value="std">эконом</option>
+                    <option value="rms">стандарт</option>
+                    <option value="hfl">комфорт</option>
+                    <option value="dpx">премиум</option>
+                </select>
+            </div>
+            <!--      TYPE   -->
+
+            <!--          DISCOUNT          -->
+            <div class="col-lg-2 col-md-12  my-2">
+                <div class="form-check">
+                    <input class="form-check-input fs-4 bg-secondary text-light my-2"
+                           name="is_discount" value="True"
+                           type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label bg-warning shadow-sm text-light rounded-3 shadow-sm mt-1 p-1 px-3 fw-bold "
+                           for="flexSwitchCheckDefault">
+                        СКИДКА %</label>
+                </div>
+            </div>
+            <!--          DISCOUNT          -->
+        </div>
+    </form>
+    <!--            SEARCH DASHBOARD    -->
+
+
+    <div class="row">
+        <div class="col-lg-12 py-2">
+            <div class="p-1 fs-6 text-secondary text-end fw-bold">
+                Всего найдено
+                <b class="bg-secondary text-light px-3 py-2 rounded-2">{{page_obj.paginator.count}}</b>
+                квартир
+            </div>
+            <!--            PARAM STRIP         -->
+            <div class="col-lg-12 py-2  bg-gradient">
+                {% for k, v in search_strip.items %}
+                {% if v %}
+                <small class="rounded p-1 my-2 text-light bg-success">{{v}}</small>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <!--           PARAM STRIP         -->
+
+        </div>
+
+        <!--        CARDS         -->
+        {% for apartment in page_obj %}
+        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-evenly">
+            <a href="{% url 'app_apartments:detail_apartment' pk=apartment.pk %}"
+               class="text-secondary text-decoration-none ">
+                <div class="card shaker px-3 pt-3 mb-3  text-secondary "
+                     style="width: 15rem; height:22rem">
+                        <img src="{{apartment.plan.url}}"
+                             class="card-image-top my-image  d-flex m-0 p-2"
+                             alt="Apartment plan"
+                              >
+
+                    <!-- DISCOUNT LABEL-->
+                    {% if apartment.discount %}
+                        <b class="bg-danger fs-6 text-light   px-3 py-2 shadow"
+                       style="position:absolute; right:-0.2rem; top:-0.2rem; width: 30%; border-radius: 10px ">
+                        -{{apartment.discount}}%</b>
+                    {% endif %}
+                    <!--DISCOUNT LABEL-->
+
+                    <!-- FAVORITE LABEL-->
+                    {% if apartment.id|stringformat:'i' in request.session.favorites.keys %}
+                        <b class="bg-warning text-light text-center shadow fs-6  rounded-start rounded-end"
+                       style="position:absolute; left:-0.2rem; top:-0.2rem; width:37%; ">
+                        избранное
+                    </b>
+                    {% endif %}
+                    <!--FAVORITE LABEL-->
+
+                    <div class="card-body text-end m-0 p-0">
+                         <p class="card-text  fw-lighter text-start">
+                            {{apartment.get_quantity_display}}
+                        </p>
+
+                        {% if apartment.discount %}
+                        <p class="card-text text-end m-0 text-secondary text-decoration-line-through fw-lighter">
+                            <i class="fa fa-lg fa-rub mx-2" aria-hidden="true"></i>{{apartment.price}}  тыс.
+                        </p>
+                        <p class="card-text  text-center bg-success text-light rounded-2  p-1   m-0  fw-bold">
+                            <i class="fa fa-lg fa-rub mx-2" aria-hidden="true"></i> {{apartment.get_current_price}} тыс.</p>
+                        {% else %}
+                         <small class="card-text m-0 text-secondary text-decoration-line-through fw-lighter">
+                          <br>
+                        </small>
+                        <h5 class="card-text text-secondary my-1"><i class="fa fa-rub" aria-hidden="true"></i>
+                            {{apartment.get_current_price}} тыс.
+                        </h5>{% endif %}
+                        <small class="card-text text-secondary m-0">{{apartment.get_apartment_complex_display}}</small>
+                        <p class="card-text text-secondary m-0"><small class="text-secondary">{{apartment.get_type_acc_display}}
+                        </small>
+                        </p>
+                        <p class="card-text text-secondary m-0"><small class=" text-secondary">
+                            {{apartment.square}} м.кв. | {{apartment.floor}} этаж</small>
+                        </p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% empty %}
+        <div class="col col-12  my-5 text-center fs-2">
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
+            По выбранным критерия ничего не нашлось...
+        </div>
+        {% endfor %}
+        <!--        CARDS         -->
+
+    </div>
+</div>
+
+{% endblock content%}

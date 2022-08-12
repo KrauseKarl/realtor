@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+{% load static %}
+
+{% if page_obj.has_other_pages %}
+<nav>
+    <div class="my-4 ">
+        <ul class="pagination ">
+            {% if page_obj.has_previous %}
+            <li class="page-item  ">
+                <a class="page-link text-dark fw-bold" href="?page=1">
+                     <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="page-item  ">
+                 <a class="page-link text-dark fw-bold" href="?page={{ page_obj.previous_page_number }}">
+                   <i class="fa fa-angle-left" aria-hidden="true"></i>
+                 </a>
+            </li>
+            {% else %}
+            <li class="page-item   disabled">
+                <span class="page-link text-secondary" href="#" tabindex="-1" aria-disabled="true">
+                     <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                </span>
+            </li>
+            <li class="page-item   disabled">
+                <span class="page-link text-secondary" href="#" tabindex="-1" aria-disabled="true">
+                   <i class="fa fa-angle-left" aria-hidden="true"></i></span>
+            </li>
+            {% endif %}
+            {% for p in page_obj.paginator.page_range %}
+            {% if page_obj.number == p %}
+            <li class="page-item  page-link text-secondary">
+                {% trans 'Page' %} {{ p }} {% trans 'of' %} {{page_obj.paginator.num_pages}}
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link text-dark fw-bold " href="?page={{ page_obj.next_page_number }}">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </li>
+            <li class="page-item">
+                <a class="page-link text-dark fw-bold " href="?page={{ page_obj.paginator.num_pages }}">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item    disabled">
+                <span class="page-link text-secondary"  tabindex="-1" aria-disabled="true">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+            </li>
+            <li class="page-item    disabled">
+                <span class="page-link  text-secondary" tabindex="-1" aria-disabled="true">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </span>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+{% endif %}

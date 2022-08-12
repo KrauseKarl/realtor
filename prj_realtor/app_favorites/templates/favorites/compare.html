@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %} Избранное {% endblock %}
+
+{% block content %}
+
+<div class="container vh-100">
+
+    <div class="row">
+        <div class="col col-6">
+            <h4  class="d-flex m-1 p-1  fw-bold text-secondary justify-content-start">
+                {% if order_by %}  {{order_by}} {% endif %}</h4>
+        </div>
+        <div class="col col-6">
+            <h4 class="d-flex m-1 p-1  fw-bold text-secondary justify-content-end">Сравнить избранные квартиры</h4>
+        </div>
+    </div>
+
+    {% if request.session.favorites|length > 0 %}
+    <div class="d-flex justify-content-evenly">
+        <table class="w-100" cellspacing="10" cellpadding="3">
+            <thead>
+            <tr class="fs-6 text-center">
+                <th class="p-4">План</th>
+                <th class="p-4">ТИП</th>
+                <th class="p-4">КОМНАТ</th>
+                <th class="p-4">
+                    <form method="get">ЭТАЖ
+                        {% if request.GET.floor %}
+                        {% if request.GET.floor == 'down' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="floor" value="up">&#11021;
+                        </button>
+                        {% elif request.GET.floor == 'up' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="floor" value="down">&#11021;
+                        </button>
+                        {% endif %}
+                        {% else %}
+                        <button class="btn p-0 m-0" style="width:2rem; height:2rem"
+                                type="submit" name="floor" value="up">&#11021;
+                        </button>
+                        {% endif %}
+                    </form>
+                </th>
+                <th class="p-4">
+                    <form method="get">ПЛОЩАДЬ
+                        {% if request.GET.square %}
+                        {% if request.GET.square == 'down' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="square" value="up">&#11021;
+                        </button>
+                        {% elif request.GET.square == 'up' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="square" value="down">&#11021;
+                        </button>
+                        {% endif %}
+                        {% else %}
+                        <button class="btn p-0 m-0" style="width:2rem; height:2rem"
+                                type="submit" name="square" value="up">&#11021;
+                        </button>
+                        {% endif %}
+                    </form>
+                </th>
+                <th class="p-4">
+                    <form method="get">ЦЕНА
+                        {% if request.GET.price %}
+                        {% if request.GET.price == 'down' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="price" value="up">&#11021;
+                        </button>
+                        {% elif request.GET.price == 'up' %}
+                        <button class="btn p-0 m-0"
+                                style="width:2rem; height:2rem"
+                                type="submit" name="price" value="down">&#11021;
+                        </button>
+                        {% endif %}
+                        {% else %}
+                        <button class="btn p-0 m-0" style="width:2rem; height:2rem"
+                                type="submit" name="price" value="up">&#11021;
+                        </button>
+                        {% endif %}
+                    </form>
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for item in favorites %}
+            <tr class="fs-5 text-center">
+                <td>
+                    <img src="{{item.plan.url}}"
+                         class="rounded mx-auto mt-2 d-block"
+                         alt="Apartment plan"
+                         style="height:5rem; width:5rem">
+                </td>
+                <td>{{ item.get_type_acc_display }}</td>
+                <td>{{ item.get_quantity_display }}</td>
+                <td>{{ item.floor }}</td>
+                <td>{{ item.square }}</td>
+                <td>{{ item.get_current_price }}</td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+    <div class="text-center m-3  fs-2">
+        <img src="{% static 'img/not found.jpg' %}" class="rounded-3" style="width: 15rem">
+        Пока ничего не выбрано для сравнения...
+    </div>
+    {% endif %}
+
+
+</div>
+{% endblock %}

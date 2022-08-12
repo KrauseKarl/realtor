@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load cache %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}Информация о компании{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="d-flex   fw-bold text-secondary justify-content-end">Информация о компании</h3>
+    <div class="row text-secondary d-flex justify-content-between">
+        <div class="col-lg-4  col-md-12  p-4 " >
+            <img src="{% static 'img/main.jpg' %}" alt="LOGO" class="rounded-2"
+                 style="height: 13rem; width:18rem">
+        </div>
+        <div class="col-lg-8  col-md-12   p-4 m-0 " > Arctic development — российская девелоперская компания.
+            Специализируется на строительстве жилых многоэтажных домов.
+            Основана в 2009 году. Штаб-квартира находится в г.Воркута. Сегодня Arctic development строит современное
+            демократичное жильё в крупных городах Урала и Сибири, в Москве и Московский области. Ежегодно это 6 000
+            новых квартир для российских семей.
+            Бизнес-идея Arctic development основана на желании изменить жизнь к лучшему, предлагая демократичное жильё
+            нового качества, простоту и надёжность покупки, комфорт и функциональность проживания.
+        </div>
+        <div class="col-lg-4  col-md-12   p-4 m-0   fs-4 " >
+            <br><b class="text-dark">16 000 квартир</b><br>
+            строится и продается<br>
+            каждый год<br>
+        </div>
+        <div class="col-lg-4  col-md-12   p-4 m-0   fs-4 " >
+            <br>Более <b class="text-dark">2 000</b> сотрудников<br>
+            в <b class="text-dark">4</b> городах
+        </div>
+        <div class="col-lg-4  col-md-12   p-4 m-0   fs-4 ">
+            <br>построено более <br>
+            <b class="text-dark">890 000</b> м.кв.<br>
+            с <b class="text-dark">2009</b> года
+        </div>
+    </div>
+</div>
+{% endblock content%}
