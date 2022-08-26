@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=8nigp&gqgykhmn!tvv0s6xg7n9jt2m!2^_w(a0wlxtj7guug%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['realtor72.pythonanywhere.com']
 
 # Application definition
 
@@ -89,8 +89,11 @@ WSGI_APPLICATION = 'prj_realtor.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Realtor72$default',
+        'USER': 'Realtor72',
+        'PASSWORD': 'Krause@1999',
+        'HOST': 'Realtor72.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -130,8 +133,8 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -154,11 +157,14 @@ SEARCH_SESSION_ID = 'search'
 
 FAVORITE_SESSION_ID = 'favorites'
 
-INTERNAL_IPS = [
-    # ...
-    "127.0.0.1",
-    # ...
-]
+# INTERNAL_IPS = [
+#     # ...
+#     "127.0.0.1",
+#     # ...
+# ]
+
+CSRF_TRUSTED_ORIGINS = ['https://testserver', 'https://127.0.0.1', 'https://realtor72.mysql.pythonanywhere-services.com']      # !!!!!!!!!!!!!!!!!!!
+
 
 RECIPIENTS_EMAIL = ['manager@mysite.com']   # замените на свою почту
 DEFAULT_FROM_EMAIL = 'admin@mysite.com'  # замените на свою почту

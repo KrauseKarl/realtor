@@ -20,17 +20,27 @@
 </head>
 
 <body style="height: 50rem" class="bg-light">
+
+
+
+
+
 <nav class="navbar navbar-expand-lg  sticky-top navbar-light  bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'app_apartments:main_page' %}">Arctic development</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav navbar-right">
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+                <ul class="navbar-nav navbar-right">
                 <!-- COMPANY  -->
                 <li class="nav-item ms-1 dropdown">
                     <a class="nav-link dropdown-toggle shaker" href="#" id="navbarDropdownMenuLink_1" role="button"
@@ -80,14 +90,7 @@
                     </a>
                 </li>
                 <!-- NEWS END  -->
-                <!-- CALLBACK -->
-                <li class="nav-item ms-1 d-flex">
-                    <input type="button"
-                           class="nav-link shaker    fw-bold px-5"
-                           id="order" data-bs-toggle="modal"
-                           data-bs-target="#orderCall" value="ЗАКАЗАТЬ ЗВОНОК">
-                </li>
-                <!--CALLBACK -->
+
 
                 <!--  FAVORITES -->
                 <li class="nav-item ms-1 d-flex ">
@@ -106,6 +109,14 @@
 
 
             </ul>
+             <!-- CALLBACK -->
+                <div class="ms-1 d-flex">
+                    <input type="button"
+                           class="nav-link shaker    btn fw-bold px-5"
+                           id="order" data-bs-toggle="modal"
+                           data-bs-target="#orderCall" value="ЗАКАЗАТЬ ЗВОНОК">
+                </div>
+                <!--CALLBACK -->
         </div><!--collapse-->
     </div><!--container-fluid-->
 </nav>

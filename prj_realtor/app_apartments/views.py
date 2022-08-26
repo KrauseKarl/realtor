@@ -145,7 +145,9 @@ class ApartmentDetailView(DetailView):
 
     def get(self, request, *args, **kwargs):
         """Функция-get для отображения формы."""
-        return self.render_to_response(self.get_context_data())
+        self.object.record_view(self.request, self.object.id)
+        ip = [request.META['HTTP_X_FORWARDED_FOR'], request.META['REMOTE_ADDR'],request.META['HTTP_X_REAL_IP']]
+        return self.render_to_response(self.get_context_data(ip=ip))
 
     def post(self, request, *args, **kwargs):
 

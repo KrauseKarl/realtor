@@ -1,6 +1,14 @@
+from django.shortcuts import get_object_or_404
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+
+
+class AccommodationView(models.Model):
+    item = models.ForeignKey('Accommodation', on_delete=models.CASCADE, related_name='views')
+    ip = models.CharField(max_length=40)
+    session = models.CharField(max_length=40)
+
 
 
 class Infrastructure(models.Model):
@@ -170,6 +178,19 @@ class Accommodation(Type, Room, Residence):
 
     def get_absolute_url(self):
         return reverse('app_apartments:detail_apartment', kwargs={'pk': self.pk})
+
+
+    def record_view(self, request, item_id):
+        item = get_object_or_404(Accommodation, pk=item_id)
+        if request.user.is_authenticated:
+            if not AccommodationView.objects.filter(item=item, session=request.session.session_key):
+                view = AccommodationView.objects.create(item=item, ip=request.META['REMOTE_ADDR'],session=request.session.session_key)
+                view.save()
+        else:
+            if not AccommodationView.objects.filter(item=item, ip=request.META['REMOTE_ADDR']):
+                view = AccommodationView.objects.create(item=item, ip=request.META['REMOTE_ADDR'], session='')
+                view.save()
+        return AccommodationView.objects.filter(item=item).count()
 
 
 

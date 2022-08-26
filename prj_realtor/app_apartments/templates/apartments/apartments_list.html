@@ -3,7 +3,7 @@
 {% load static %}
 {% load cache %}
 {% get_current_language as LANGUAGE_CODE %}
-{% block title %}Информация о компании{% endblock %}
+{% block title %}Квартиры{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -15,140 +15,141 @@
         </a>
     </h3>
 
-
-    <!--            SEARCH DASHBOARD    -->
-    <form method="get">
-        <div class="row  p-2 fw-bold text-center">
-            <!--           COMPLEX         -->
-            <div class="col-lg-2 col-md-12  my-2">
-                <select class="form-select w-100 " style="form-text-color:grey" name="apartment_complex"
-                        aria-label="apartment_complex">
-                    <option value="" disabled selected hidden>Выберите ЖК</option>
-                    <option value="C">ЖК Центральный</option>
-                    <option value="R">ЖК Речник</option>
-                    <option value="P">ЖК Парковый</option>
-                </select>
-            </div>
-            <!--           COMPLEX         -->
-
-            <!--          ROOMS          -->
-            <div class="col-lg-5 col-md-12  my-2 fw-lighter border rounded-2 py-1">ТИП
-                <div class="form-radio form-check-inline ">
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox1" value="zro">
-                    <label class="form-check-label" for="inlineCheckbox1">C</label>
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox2" value="one">
-                    <label class="form-check-label" for="inlineCheckbox2">1К</label>
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox3" value="two">
-                    <label class="form-check-label" for="inlineCheckbox3">2К</label>
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox4" value="thr">
-                    <label class="form-check-label" for="inlineCheckbox4">3К</label>
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox5" value="hgt">
-                    <label class="form-check-label" for="inlineCheckbox5">+3m</label>
-                    <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
-                           id="inlineCheckbox6" value="ext">
-                    <label class="form-check-label" for="inlineCheckbox5">2ЭТ</label>
+<div class="row">
+     <div class="col-lg-12 py-2">
+        <!--            SEARCH DASHBOARD    -->
+        <form method="get">
+            <div class="row  p-2 fw-bold text-center">
+                <!--           COMPLEX         -->
+                <div class="col-lg-2 col-md-12  my-2">
+                    <select class="form-select " style="form-text-color:grey" name="apartment_complex"
+                            aria-label="apartment_complex">
+                        <option value="" disabled selected hidden>Выберите ЖК</option>
+                        <option value="C">ЖК Центральный</option>
+                        <option value="R">ЖК Речник</option>
+                        <option value="P">ЖК Парковый</option>
+                    </select>
                 </div>
-            </div>
-            <!--          ROOMS          -->
+                <!--           COMPLEX         -->
 
-            <!--      ORDERING      -->
-            <div class="col-lg-2 col-md-12  my-2 ">
-                <select class="form-select  " style="form-text-color:grey" name="sort"
-                        aria-label="apartment_complex">
-                    <option value="" disabled selected hidden>Сортировать по ..</option>
-                    <option value="price">возрастанию цены</option>
-                    <option value="-price">убыванию цены</option>
-                    <option value="square">возрастанию площади</option>
-                    <option value="-square">убыванию площади</option>
-
-                </select>
-            </div>
-            <!--     ORDERING       -->
-
-            <!--          BUTTON          -->
-            <div class="col-lg-3 col-md-12  my-2 ">
-                <input class="btn btn-outline-secondary fw-bold  rounded-3" style="width:7rem" type="submit"
-                       value="НАЙТИ">
-                <a class="btn btn-outline-secondary fw-bold  rounded-3"
-                   href="{% url 'app_apartments:list_apartment' %}" style="width:7rem">СБРОСИТЬ</a>
-
-            </div>
-            <!--          BUTTON          -->
-
-
-            <!--          SQUARE          -->
-            <div class="col-lg-3 col-md-12  my-2">
-                <div class="input-group">
-                    <span class="input-group-text rounded-3">S m&#178;</span>
-                    <input type="text" name="square_min" placeholder="33 м.кв." aria-label="min"
-                           class="form-control rounded-3 ">
-                    <input type="text" name="square_max" placeholder="250 м.кв." aria-label="max"
-                           class="form-control rounded-3">
+                <!--          ROOMS          -->
+                <div class="col-lg-5 col-md-12  my-2 fw-lighter border rounded-2 py-1">ТИП
+                    <div class="form-radio form-check-inline ">
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox1" value="zro">
+                        <label class="form-check-label" for="inlineCheckbox1">C</label>
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox2" value="one">
+                        <label class="form-check-label" for="inlineCheckbox2">1К</label>
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox3" value="two">
+                        <label class="form-check-label" for="inlineCheckbox3">2К</label>
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox4" value="thr">
+                        <label class="form-check-label" for="inlineCheckbox4">3К</label>
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox5" value="hgt">
+                        <label class="form-check-label" for="inlineCheckbox5">+3m</label>
+                        <input class="form-check-input mx-2 bg-secondary fs-6 p-2" name="quantity" type="radio"
+                               id="inlineCheckbox6" value="ext">
+                        <label class="form-check-label" for="inlineCheckbox5">2ЭТ</label>
+                    </div>
                 </div>
-            </div>
-            <!--          SQUARE          -->
+                <!--          ROOMS          -->
 
-            <!--          PRICE          -->
-            <div class="col-lg-3 col-md-12  my-2">
-                <div class="input-group">
-                    <span class="input-group-text rounded-3 "><i class="fa fa-rub" aria-hidden="true"></i> тыс.</span>
-                    <input type="text" placeholder="от " name="price_min" aria-label="min"
-                           class="form-control rounded-3   ">
-                    <input type="text" placeholder="до " name="price_max" aria-label="max"
-                           class="form-control rounded-3   ">
+                <!--      ORDERING      -->
+                <div class="col-lg-2 col-md-12  my-2 ">
+                    <select class="form-select  " style="form-text-color:grey" name="sort"
+                            aria-label="apartment_complex">
+                        <option value="" disabled selected hidden>Сортировать по ..</option>
+                        <option value="price">возрастанию цены</option>
+                        <option value="-price">убыванию цены</option>
+                        <option value="square">возрастанию площади</option>
+                        <option value="-square">убыванию площади</option>
+
+                    </select>
                 </div>
-            </div>
-            <!--          PRICE          -->
+                <!--     ORDERING       -->
 
-            <!--          FLOOR          -->
-            <div class="col-lg-2 col-md-12  my-2 ">
-                <div class="input-group">
-                    <span class="input-group-text rounded-3">ЭТАЖ</span>
+                <!--          BUTTON          -->
+                <div class="col-lg-3 col-md-12  my-2 ">
+                    <input class="btn btn-outline-secondary fw-bold  rounded-3" style="width:7rem" type="submit"
+                           value="НАЙТИ">
+                    <a class="btn btn-outline-secondary fw-bold  rounded-3"
+                       href="{% url 'app_apartments:list_apartment' %}" style="width:7rem">СБРОСИТЬ</a>
 
-                    <input type="text" name="floor_min" placeholder="1" aria-label="min"
-                           class="form-control rounded-3">
-                    <input type="text" name="floor_max" placeholder="25" aria-label="max"
-                           class="form-control rounded-3">
                 </div>
-            </div>
-            <!--          FLOOR          -->
+                <!--          BUTTON          -->
 
-            <!--      TYPE   -->
-            <div class="col-lg-2 col-md-12  my-2">
-                <select class="form-select w-100 " style="form-text-color:grey" name="type_acc"
-                        aria-label="apartment_complex">
-                    <option value="" disabled selected hidden>ТИП</option>
-                    <option value="std">эконом</option>
-                    <option value="rms">стандарт</option>
-                    <option value="hfl">комфорт</option>
-                    <option value="dpx">премиум</option>
-                </select>
-            </div>
-            <!--      TYPE   -->
 
-            <!--          DISCOUNT          -->
-            <div class="col-lg-2 col-md-12  my-2">
-                <div class="form-check">
-                    <input class="form-check-input fs-4 bg-secondary text-light my-2"
-                           name="is_discount" value="True"
-                           type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label bg-warning shadow-sm text-light rounded-3 shadow-sm mt-1 p-1 px-3 fw-bold "
-                           for="flexSwitchCheckDefault">
-                        СКИДКА %</label>
+                <!--          SQUARE          -->
+                <div class="col-lg-3 col-md-12  my-2">
+                    <div class="input-group">
+                        <span class="input-group-text rounded-3">S m&#178;</span>
+                        <input type="text" name="square_min" placeholder="33 м.кв." aria-label="min"
+                               class="form-control rounded-3 ">
+                        <input type="text" name="square_max" placeholder="250 м.кв." aria-label="max"
+                               class="form-control rounded-3">
+                    </div>
                 </div>
+                <!--          SQUARE          -->
+
+                <!--          PRICE          -->
+                <div class="col-lg-3 col-md-12  my-2">
+                    <div class="input-group">
+                        <span class="input-group-text rounded-3 "><i class="fa fa-rub" aria-hidden="true"></i> тыс.</span>
+                        <input type="text" placeholder="от " name="price_min" aria-label="min"
+                               class="form-control rounded-3   ">
+                        <input type="text" placeholder="до " name="price_max" aria-label="max"
+                               class="form-control rounded-3   ">
+                    </div>
+                </div>
+                <!--          PRICE          -->
+
+                <!--          FLOOR          -->
+                <div class="col-lg-2 col-md-12  my-2 ">
+                    <div class="input-group">
+                        <span class="input-group-text rounded-3">ЭТАЖ</span>
+
+                        <input type="text" name="floor_min" placeholder="1" aria-label="min"
+                               class="form-control rounded-3">
+                        <input type="text" name="floor_max" placeholder="25" aria-label="max"
+                               class="form-control rounded-3">
+                    </div>
+                </div>
+                <!--          FLOOR          -->
+
+                <!--      TYPE   -->
+                <div class="col-lg-2 col-md-12  my-2">
+                    <select class="form-select w-100 " style="form-text-color:grey" name="type_acc"
+                            aria-label="apartment_complex">
+                        <option value="" disabled selected hidden>ТИП</option>
+                        <option value="std">эконом</option>
+                        <option value="rms">стандарт</option>
+                        <option value="hfl">комфорт</option>
+                        <option value="dpx">премиум</option>
+                    </select>
+                </div>
+                <!--      TYPE   -->
+
+                <!--          DISCOUNT          -->
+                <div class="col-lg-2 col-md-12  my-2">
+                    <div class="form-check">
+                        <input class="form-check-input fs-4 bg-secondary text-light my-2"
+                               name="is_discount" value="True"
+                               type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label bg-warning shadow-sm text-light rounded-3 shadow-sm mt-1 p-1 px-3 fw-bold "
+                               for="flexSwitchCheckDefault">
+                            СКИДКА %</label>
+                    </div>
+                </div>
+                <!--          DISCOUNT          -->
             </div>
-            <!--          DISCOUNT          -->
-        </div>
-    </form>
-    <!--            SEARCH DASHBOARD    -->
+        </form>
+        <!--            SEARCH DASHBOARD    -->
+    </div>
 
 
-    <div class="row">
         <div class="col-lg-12 py-2">
             <div class="p-1 fs-6 text-secondary text-end fw-bold">
                 Всего найдено
@@ -169,7 +170,7 @@
 
         <!--        CARDS         -->
         {% for apartment in page_obj %}
-        <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-evenly">
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-evenly">
             <a href="{% url 'app_apartments:detail_apartment' pk=apartment.pk %}"
                class="text-secondary text-decoration-none ">
                 <div class="card shaker px-3 pt-3 mb-3  text-secondary "
@@ -227,7 +228,7 @@
             </a>
         </div>
         {% empty %}
-        <div class="col col-12  my-5 text-center fs-2">
+        <div class="col-12  my-5 text-center fs-2">
             <i class="fa fa-frown-o" aria-hidden="true"></i>
             По выбранным критерия ничего не нашлось...
         </div>

@@ -41,10 +41,10 @@
     pk: 4
     fields:
         title: Central
-        description: ' Жилой комплекс "Центральный" - это квартал в историческом центре
+        description: Жилой комплекс "Центральный" - это квартал в историческом центре
             Воркуты. Он состоит из двух домов   с жилыми апартаментами и офисной галереи.
             Первые этажи занимает зона ритейла с ресторанами, офисами банков, аптеками,
-            цветочными салонами, книжными магазинами и бутиками.'
+            цветочными салонами, книжными магазинами и бутиками.
         slug: central
         map: https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A778f49f2170d52883a7b55347079f89b356493134881c7096433576454aef674&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true
         gallery:
@@ -63,10 +63,10 @@
     pk: 5
     fields:
         title: Park
-        description: ' Позвольте себе каждое утро пробежку в своем парке!  Жилой комплекс
+        description: Позвольте себе каждое утро пробежку в своем парке!  Жилой комплекс
             "Парковый" - это современный жилой комплек состоящий из 4 домов рядом
             с центрльным парком Воркуты.  Первые этажи занимает зона ритейла с ресторанами,
-            офисами банков, аптеками, цветочными салонами, книжными магазинами и бутиками.'
+            офисами банков, аптеками, цветочными салонами, книжными магазинами и бутиками.
         slug: park
         map: https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5b7e805936ee40ba078a2f4823193cdff60f08016f7a906a2e8a0e974e03195e&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true
         gallery:
@@ -121,13 +121,10 @@
         residence: 6
         gallery:
         - 9
-        - 6
+        - 10
+        - 11
+        - 13
         - 15
-        - 1
-        - 46
-        - 37
-        - 42
-        - 2
 -   model: app_apartments.accommodation
     pk: 2
     fields:
@@ -146,15 +143,7 @@
         is_discount: false
         is_active: true
         residence: 6
-        gallery:
-        - 9
-        - 7
-        - 14
-        - 1
-        - 4
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 3
     fields:
@@ -192,15 +181,7 @@
         is_discount: true
         is_active: false
         residence: 6
-        gallery:
-        - 9
-        - 7
-        - 14
-        - 1
-        - 4
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 5
     fields:
@@ -219,15 +200,7 @@
         is_discount: false
         is_active: false
         residence: 6
-        gallery:
-        - 11
-        - 8
-        - 13
-        - 1
-        - 47
-        - 38
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 6
     fields:
@@ -246,17 +219,11 @@
         is_discount: false
         is_active: false
         residence: 6
-        gallery:
-        - 12
-        - 13
-        - 4
-        - 37
-        - 42
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 7
     fields:
-        apartment_complex: R
+        apartment_complex: C
         quantity: ext
         square: 217
         floor: 10
@@ -265,22 +232,13 @@
             площадь города
         created: 2022-07-13 15:20:35.733000+00:00
         updated: 2022-07-13 15:20:35.733000+00:00
-        plan: plan/2022/07/31/Duplex-plan_1.jpg
+        plan: plan/2022/07/26/imgonline-com-ua-Replace-color-yWTUqr3uU8JhAxIR.jpg
         price: '24000'
         discount: '0'
         is_discount: false
         is_active: false
         residence: 6
-        gallery:
-        - 48
-        - 11
-        - 7
-        - 14
-        - 46
-        - 39
-        - 3
-        - 42
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 8
     fields:
@@ -299,16 +257,7 @@
         is_discount: false
         is_active: false
         residence: 6
-        gallery:
-        - 48
-        - 9
-        - 8
-        - 15
-        - 41
-        - 47
-        - 38
-        - 3
-        - 42
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 9
     fields:
@@ -403,15 +352,7 @@
         is_discount: true
         is_active: false
         residence: 6
-        gallery:
-        - 9
-        - 7
-        - 14
-        - 1
-        - 4
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 14
     fields:
@@ -430,14 +371,7 @@
         is_discount: false
         is_active: false
         residence: 4
-        gallery:
-        - 19
-        - 16
-        - 24
-        - 46
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 15
     fields:
@@ -456,14 +390,7 @@
         is_discount: false
         is_active: false
         residence: 4
-        gallery:
-        - 19
-        - 16
-        - 24
-        - 46
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 16
     fields:
@@ -482,15 +409,7 @@
         is_discount: true
         is_active: false
         residence: 5
-        gallery:
-        - 29
-        - 27
-        - 33
-        - 1
-        - 41
-        - 37
-        - 3
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 17
     fields:
@@ -509,15 +428,7 @@
         is_discount: false
         is_active: false
         residence: 5
-        gallery:
-        - 29
-        - 27
-        - 33
-        - 1
-        - 41
-        - 37
-        - 3
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 18
     fields:
@@ -536,15 +447,7 @@
         is_discount: true
         is_active: false
         residence: 5
-        gallery:
-        - 29
-        - 27
-        - 33
-        - 1
-        - 41
-        - 37
-        - 3
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 19
     fields:
@@ -563,14 +466,7 @@
         is_discount: false
         is_active: false
         residence: 4
-        gallery:
-        - 19
-        - 16
-        - 24
-        - 46
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 20
     fields:
@@ -589,14 +485,7 @@
         is_discount: false
         is_active: false
         residence: 4
-        gallery:
-        - 19
-        - 16
-        - 24
-        - 46
-        - 37
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 21
     fields:
@@ -615,13 +504,7 @@
         is_discount: false
         is_active: false
         residence: 4
-        gallery:
-        - 19
-        - 16
-        - 23
-        - 38
-        - 42
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 22
     fields:
@@ -640,15 +523,7 @@
         is_discount: false
         is_active: false
         residence: 5
-        gallery:
-        - 30
-        - 31
-        - 28
-        - 34
-        - 46
-        - 38
-        - 42
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 23
     fields:
@@ -667,13 +542,7 @@
         is_discount: false
         is_active: false
         residence: 5
-        gallery:
-        - 28
-        - 35
-        - 47
-        - 38
-        - 3
-        - 36
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 24
     fields:
@@ -692,15 +561,7 @@
         is_discount: false
         is_active: false
         residence: 5
-        gallery:
-        - 29
-        - 27
-        - 33
-        - 1
-        - 41
-        - 37
-        - 3
-        - 2
+        gallery: []
 -   model: app_apartments.accommodation
     pk: 25
     fields:
@@ -721,7 +582,6 @@
         residence: 5
         gallery:
         - 30
-        - 27
         - 33
         - 4
         - 38
@@ -768,12 +628,7 @@
         is_active: true
         residence: 4
         gallery:
-        - 48
-        - 23
         - 26
-        - 41
-        - 39
-        - 42
 -   model: app_apartments.image
     pk: 1
     fields:
@@ -1106,7 +961,7 @@
 -   model: app_apartments.image
     pk: 48
     fields:
-        title: Двухуровненавая 3D модель(1 вариант)
+        title: ��������������� 3D ������(1 �������)
         image: gallery/2022/07/31/Duplex_3D_6.jpg
-        created: 2022-07-31 17:19:38.632930+00:00
-        updated: 2022-07-31 17:19:38.632930+00:00
+        created: 2022-07-31 17:19:38.632000+00:00
+        updated: 2022-07-31 17:19:38.632000+00:00
