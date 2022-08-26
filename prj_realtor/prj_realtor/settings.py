@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-=8nigp&gqgykhmn!tvv0s6xg7n9jt2m!2^_w(a0wlxtj7guug%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['realtor72.pythonanywhere.com']
+ALLOWED_HOSTS = ['realtor72.pythonanywhere.com', 'localhost']
 
 # Application definition
 
@@ -86,16 +86,21 @@ WSGI_APPLICATION = 'prj_realtor.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Realtor72$default',
-        'USER': 'Realtor72',
-        'PASSWORD': 'Krause@1999',
-        'HOST': 'Realtor72.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Realtor72$default',
+#         'USER': 'Realtor72',
+#         'PASSWORD': 'Krause@1999',
+#         'HOST': 'Realtor72.mysql.pythonanywhere-services.com',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -129,18 +134,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 FIXTURE_ROOT = os.path.join(BASE_DIR, 'fixtures/')
 
@@ -163,14 +166,9 @@ FAVORITE_SESSION_ID = 'favorites'
 #     # ...
 # ]
 
-CSRF_TRUSTED_ORIGINS = ['https://testserver', 'https://127.0.0.1', 'https://realtor72.mysql.pythonanywhere-services.com']      # !!!!!!!!!!!!!!!!!!!
+CSRF_TRUSTED_ORIGINS = ['https://testserver', 'https://127.0.0.1',
+                        'https://realtor72.mysql.pythonanywhere-services.com']  # !!!!!!!!!!!!!!!!!!!
 
-
-RECIPIENTS_EMAIL = ['manager@mysite.com']   # замените на свою почту
+RECIPIENTS_EMAIL = ['manager@mysite.com']  # замените на свою почту
 DEFAULT_FROM_EMAIL = 'admin@mysite.com'  # замените на свою почту
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
-
-
-
